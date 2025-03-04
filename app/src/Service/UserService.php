@@ -21,7 +21,6 @@ class UserService implements UserServiceInterface
 
     public function createUser(string $name, string $email): User
     {
-        // Проверка на существование пользователя с таким email
         $existingUser = $this->em->getRepository(User::class)->findOneBy(['email' => $email]);
         if ($existingUser) {
             throw new \InvalidArgumentException('User with this email already exists');

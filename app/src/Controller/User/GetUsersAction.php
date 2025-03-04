@@ -2,12 +2,11 @@
 
 namespace App\Controller\User;
 
-use App\Service\UserServiceInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/api/users', name: 'get_users', methods: ['GET'])]
+#[Route('/api/users', name: 'get_users', methods: ['GET'], format: 'json')]
 class GetUsersAction extends AbstractUserAction
 {
     public function __invoke(EntityManagerInterface $em): JsonResponse
