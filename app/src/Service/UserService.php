@@ -7,11 +7,8 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class UserService implements UserServiceInterface
 {
-    private EntityManagerInterface $em;
-
-    public function __construct(EntityManagerInterface $em)
+    public function __construct(private readonly EntityManagerInterface $em)
     {
-        $this->em = $em;
     }
 
     public function getAllUsers(): array
