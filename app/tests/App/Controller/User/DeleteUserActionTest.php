@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class DeleteUserActionTest extends WebTestCase
 {
-    public function testSomething(): void
+    public function testDeleteUserReturnsNoContentStatus(): void
     {
         $client = static::createClient();
         $em = static::getContainer()->get('doctrine')->getManager();

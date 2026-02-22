@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class CreateUserActionTest extends WebTestCase
 {
-    public function testSomething(): void
+    public function testCreateUserReturnsCreatedStatus(): void
     {
         $client = static::createClient();
 
